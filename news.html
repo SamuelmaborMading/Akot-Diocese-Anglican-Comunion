@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>News - ECSS Akot Diocese</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <img class="img-logo" src="images/Akot Diocese logo design.png" alt=""> ECSS Akot Diocese
+      </div>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="structure.html">Diocese Structure</a></li>
+        <li><a href="news.html" class="active">News</a></li>
+        <li><a href="contact.html">Contact & Donate</a></li>
+        <li><a href="admin.html">Admin Panel</a></li>
+      </ul>
+      <div class="burger" id="burger"><i class="fas fa-bars"></i></div>
+    </nav>
+  </header>
+  <div class="background-image"><img src="images/background-image.jpg" alt=""></div>
+  <main class="container">
+    <h1>Diocese News & Updates</h1>
+    <p class="subtitle">Stay informed about the latest events, announcements, and happenings across Akot Diocese</p>
+    
+    <!-- Featured News with Hover Effect -->
+    <div class="featured-news">
+      <div class="news-carousel" id="newsCarousel">
+        <div class="news-card featured">
+          <img src="images/profile.jpg" alt="Bishop's Visit">
+          <div class="news-content">
+            <span class="news-date">March 15, 2025</span>
+            <h3>Bishop's Visit to Ramdor Archdeaconry</h3>
+            <p>Rt. Rev. Dr. Stephen Amum completed a three-day pastoral visit to Ramdor Archdeaconry, confirming 150 new members and dedicating a new church building.</p>
+            <a href="#" class="read-more">Read More →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="news-grid">
+      <div class="news-card hover-news" data-news-index="0">
+        <img src="images/JWL.jpg" alt="Youth Conference">
+        <div class="news-content">
+          <span class="news-date">March 10, 2025</span>
+          <h3>Annual Youth Conference 2025</h3>
+          <p>Over 500 young people gathered for the annual youth conference under the theme "Rise and Shine." The event featured worship, workshops, and leadership training.</p>
+          <div class="news-hover-preview">Speakers included international guests from Kenya and Uganda. Highlights: music ministry, sports competition, and community outreach.</div>
+          <a href="#" class="read-more">Read More →</a>
+        </div>
+      </div>
+      
+      <div class="news-card hover-news" data-news-index="1">
+        <img src="images/photo.jpg" alt="New Church Dedication">
+        <div class="news-content">
+          <span class="news-date">March 5, 2025</span>
+          <h3>New Church Dedication in Paloch</h3>
+          <p>St. Andrew's Church in Paloch Archdeaconry was officially dedicated in a joyful ceremony attended by over 300 worshippers.</p>
+          <div class="news-hover-preview">The new facility includes a sanctuary, Sunday school rooms, and a community hall. Construction was completed with support from the diocese and local contributions.</div>
+          <a href="#" class="read-more">Read More →</a>
+        </div>
+      </div>
+      
+      <div class="news-card hover-news" data-news-index="2">
+        <img src="images/Ordination.jpg" alt="Mothers Union">
+        <div class="news-content">
+          <span class="news-date">February 28, 2025</span>
+          <h3>Mothers' Union Empowerment Workshop</h3>
+          <p>Women from across the diocese gathered for a three-day workshop on economic empowerment and family ministry.</p>
+          <div class="news-hover-preview">Topics included small business management, health awareness, and biblical teachings on family. 150 women received certificates of participation.</div>
+          <a href="#" class="read-more">Read More →</a>
+        </div>
+      </div>
+      
+      <div class="news-card hover-news" data-news-index="3">
+        <img src="images/Pastors.jpg" alt="Ordination Service">
+        <div class="news-content">
+          <span class="news-date">February 20, 2025</span>
+          <h3>Ordination of New Priests</h3>
+          <p>Eight deacons were ordained to the priesthood in a solemn service at Akot Cathedral.</p>
+          <div class="news-hover-preview">The new priests will serve in various archdeaconries across the diocese. Prayers for their ministry continue throughout the diocese.</div>
+          <a href="#" class="read-more">Read More →</a>
+        </div>
+      </div>
+      
+      <div class="news-card hover-news" data-news-index="4">
+        <img src="images/outreach.jpg" alt="Health Campaign">
+        <div class="news-content">
+          <span class="news-date">February 15, 2025</span>
+          <h3>Community Health Outreach</h3>
+          <p>The diocesan health department organized a free medical camp serving over 1,000 people in Atiaba Archdeaconry.</p>
+          <div class="news-hover-preview">Services included malaria testing, maternal health checks, and distribution of mosquito nets. Partnership with local health authorities made the event possible.</div>
+          <a href="#" class="read-more">Read More →</a>
+        </div>
+      </div>
+      
+      <div class="news-card hover-news" data-news-index="5">
+        <img src="images/conference.jpg" alt="Peace Conference">
+        <div class="news-content">
+          <span class="news-date">February 10, 2025</span>
+          <h3>Interfaith Peace Conference</h3>
+          <p>Religious leaders from across South Sudan gathered in Akot to discuss peace and reconciliation initiatives.</p>
+          <div class="news-hover-preview">The conference resulted in a joint declaration promoting unity and peaceful coexistence among communities.</div>
+          <a href="#" class="read-more">Read More →</a>
+        </div>
+      </div>
+    </div>
+    
+    <div class="newsletter-signup">
+      <h3>Subscribe to Our Newsletter</h3>
+      <p>Get the latest news and updates delivered to your inbox</p>
+      <form id="newsletterForm">
+        <input type="email" placeholder="Enter your email address" required>
+        <button type="submit">Subscribe</button>
+      </form>
+    </div>
+  </main>
+  
+  <footer>
+    <div class="footer-content">
+      <div class="footer-col">
+        <h4>ECSS Akot Diocese</h4>
+        <p>P.O. Box 10, Akot, South Sudan<br>Email: info@akotdiocese.org<br>Phone: +211 912 345 678</p>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="structure.html">Diocese Structure</a></li>
+          <li><a href="news.html">News</a></li>
+          <li><a href="contact.html">Donate</a></li>
+          <li><a href="admin.html">Admin</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Follow Us</h4>
+        <div class="social-icons">
+          <i class="fab fa-facebook-f"></i>
+          <i class="fab fa-twitter"></i>
+          <i class="fab fa-youtube"></i>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 Episcopal Church of South Sudan - Akot Diocese. All rights reserved.</p>
+    </div>
+  </footer>
+  
+  <script src="script.js"></script>
+</body>
+</html>

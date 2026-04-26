@@ -1,0 +1,930 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', Arial, sans-serif;
+  background-color: #fefefe;
+  color: #2c3e4f;
+  line-height: 1.6;
+}
+.background-image {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  min-height: 65vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 40px;
+}
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #ffffff;
+  padding: 1rem 2rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 100;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #2c6e4f;
+}
+.img-logo{
+  width: 50px;
+  margin-bottom: 0;
+
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 8px;
+  margin-bottom: 0;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #2c3e4f;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.nav-links a:hover, .nav-links a.active {
+  color: #2c6e4f;
+  border-bottom: 2px solid #c59a6b;
+}
+
+.burger {
+  display: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+/* Hero */
+.hero {
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.5)), url('images/Prayer.jpg') center/cover no-repeat;
+  min-height: 65vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  position: relative;
+}
+
+.hero-content h1 {
+  font-size: 2.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.hero-content h2 {
+  font-size: 2rem;
+  font-weight: 400;
+  margin-bottom: 1rem;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.btn-primary {
+  background: #c59a6b;
+  color: white;
+  padding: 0.8rem 2rem;
+  border-radius: 40px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+  display: inline-block;
+}
+
+.btn-primary:hover {
+  background: #2c6e4f;
+  transform: translateY(-3px);
+}
+
+.btn-outline {
+  border: 2px solid #c59a6b;
+  background: transparent;
+  padding: 0.6rem 1.5rem;
+  border-radius: 40px;
+  text-decoration: none;
+  color: #c59a6b;
+  font-weight: 500;
+  transition: 0.3s;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.btn-outline:hover {
+  background: #c59a6b;
+  color: white;
+}
+
+/* Container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 3rem 2rem;
+}
+
+.subtitle {
+  color: #666;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+/* Welcome Section */
+.welcome-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: center;
+}
+
+.welcome-text h3 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #2c6e4f;
+}
+
+.highlights-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+  gap: 1.5rem;
+}
+
+.highlight-card {
+  background: #f8f9fa;
+  padding: 1.5rem;
+  border-radius: 20px;
+  text-align: center;
+  transition: 0.2s;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+}
+
+.highlight-card i {
+  font-size: 2.5rem;
+  color: #c59a6b;
+  margin-bottom: 1rem;
+}
+
+/* Quick Navigation */
+.quick-nav h3 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.arch-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.arch-link {
+  background: #eef2f3;
+  padding: 0.6rem 1.3rem;
+  border-radius: 50px;
+  text-decoration: none;
+  color: #2c6e4f;
+  font-weight: 500;
+  transition: 0.2s;
+}
+
+.arch-link:hover {
+  background: #c59a6b;
+  color: white;
+}
+
+.view-all {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+/* Structure Grid */
+.structure-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px,1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.card {
+  background: white;
+  border-radius: 20px;
+  padding: 1.5rem;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+  transition: transform 0.2s, box-shadow 0.2s;
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+
+.card h4 {
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+  color: #2c6e4f;
+}
+
+.card i {
+  margin-top: 1rem;
+  color: #c59a6b;
+}
+
+/* About Page */
+.about-section {
+  margin-bottom: 3rem;
+}
+
+.about-section h2 {
+  margin-bottom: 1.5rem;
+  color: #2c6e4f;
+  border-bottom: 2px solid #c59a6b;
+  display: inline-block;
+  padding-bottom: 0.5rem;
+}
+
+.bishop-card {
+  display: flex;
+  gap: 1.5rem;
+  background: #f8f9fa;
+  padding: 1.5rem;
+  border-radius: 20px;
+  margin-bottom: 1rem;
+  align-items: center;
+}
+
+.bishop-card.current {
+  background: #eef2f3;
+  border-left: 4px solid #c59a6b;
+}
+
+.bishop-img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.leadership-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.leader-card {
+  text-align: center;
+  padding: 1.5rem;
+  background: #f8f9fa;
+  border-radius: 20px;
+}
+
+.leader-card i {
+  font-size: 2rem;
+  color: #c59a6b;
+  margin-bottom: 0.5rem;
+}
+
+/* Archdeaconry Detail */
+.archdeaconry-detail, .parish-info {
+  margin-top: 2rem;
+}
+
+.leadership-card {
+  display: flex;
+  gap: 2rem;
+  background: #f8f9fa;
+  padding: 2rem;
+  border-radius: 20px;
+  margin-bottom: 2rem;
+  align-items: center;
+}
+
+.leader-img-large {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.leadership-info h2 {
+  margin-bottom: 1rem;
+}
+
+.leadership-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.leadership-row div {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.theme-verse {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.theme-box, .verse-box {
+  padding: 1.5rem;
+  border-radius: 20px;
+  text-align: center;
+}
+
+.theme-box {
+  background: #eef2f3;
+}
+
+.verse-box {
+  background: #f8f9fa;
+  border-left: 4px solid #c59a6b;
+}
+
+.theme-box i, .verse-box i {
+  font-size: 2rem;
+  color: #c59a6b;
+  margin-bottom: 1rem;
+}
+
+.breadcrumb {
+  margin-bottom: 2rem;
+}
+
+.breadcrumb a {
+  color: #c59a6b;
+  text-decoration: none;
+}
+
+/* News Section */
+.news-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.news-card {
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.news-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.news-content {
+  padding: 1.5rem;
+  position: relative;
+}
+
+.news-date {
+  color: #c59a6b;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.news-content h3 {
+  margin: 0.5rem 0;
+  color: #2c6e4f;
+}
+
+.news-hover-preview {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+  background: #f8f9fa;
+  padding: 0 1rem;
+  margin: 0.5rem 0;
+  border-radius: 8px;
+  color: #555;
+  font-size: 0.9rem;
+}
+
+.hover-news:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+}
+
+.hover-news:hover .news-hover-preview {
+  max-height: 100px;
+  padding: 0.8rem 1rem;
+}
+
+.read-more {
+  display: inline-block;
+  margin-top: 1rem;
+  color: #c59a6b;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.read-more:hover {
+  text-decoration: underline;
+}
+
+.featured-news {
+  margin-bottom: 3rem;
+}
+
+.newsletter-signup {
+  background: linear-gradient(135deg, #2c6e4f, #1e4a35);
+  color: white;
+  padding: 3rem;
+  border-radius: 20px;
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.newsletter-signup h3 {
+  margin-bottom: 0.5rem;
+}
+
+.newsletter-signup form {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 1.5rem;
+}
+
+.newsletter-signup input {
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 40px;
+  width: 300px;
+  font-size: 1rem;
+}
+
+.newsletter-signup button {
+  background: #c59a6b;
+  color: white;
+  border: none;
+  padding: 0.8rem 2rem;
+  border-radius: 40px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+/* Contact Page */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.contact-info {
+  background: #f8f9fa;
+  padding: 2rem;
+  border-radius: 20px;
+}
+
+.contact-info h3 {
+  color: #2c6e4f;
+  margin: 1rem 0 0.5rem;
+}
+
+.contact-info h3:first-child {
+  margin-top: 0;
+}
+
+.forms-container {
+  display: grid;
+  gap: 2rem;
+grid-template-columns: 1fr 1fr;
+}
+
+.form-card {
+  
+  background: white;
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.form-card h3 {
+  color: #2c6e4f;
+  margin-bottom: 1.5rem;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.4rem;
+  font-weight: 500;
+}
+
+.form-group input, .form-group textarea, .form-group select {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+.form-group input:focus, .form-group textarea:focus {
+  outline: none;
+  border-color: #c59a6b;
+}
+
+button {
+  background: #2c6e4f;
+  color: white;
+  border: none;
+  padding: 0.8rem 2rem;
+  border-radius: 40px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+button:hover {
+  background: #1f4f38;
+}
+
+/* Admin Page */
+.admin-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
+  margin-bottom: 2rem;
+}
+
+.admin-section {
+  margin-bottom: 3rem;
+}
+
+.admin-section h2 {
+  margin-bottom: 1rem;
+  color: #2c6e4f;
+}
+
+.table-container {
+  overflow-x: auto;
+}
+
+.admin-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.admin-table th, .admin-table td {
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+
+.admin-table th {
+   background: #f8f9fa;
+  font-weight: 600;
+  color: #2c6e4f;
+}
+
+.admin-table tr:hover {
+  background: #f8f9fa;
+}
+
+.no-data {
+  text-align: center;
+  color: #999;
+  padding: 2rem;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.stat-card {
+  background: linear-gradient(135deg, #2c6e4f, #1e4a35);
+  color: white;
+  padding: 1.5rem;
+  border-radius: 20px;
+  text-align: center;
+}
+
+.stat-card i {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.stat-card h3 {
+  font-size: 2rem;
+  margin: 0.5rem 0;
+}
+
+/* Footer */
+footer {
+  background: #1e2a32;
+  color: #ddd;
+  padding: 2rem 2rem 1rem;
+  margin-top: 3rem;
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 2rem;
+}
+
+.footer-col h4 {
+  color: white;
+  margin-bottom: 1rem;
+}
+
+.footer-col ul {
+  list-style: none;
+}
+
+.footer-col a {
+  color: #ccc;
+  text-decoration: none;
+  line-height: 2;
+}
+
+.footer-col a:hover {
+  color: #c59a6b;
+}
+
+.social-icons i {
+  font-size: 1.4rem;
+  margin-right: 1rem;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.social-icons i:hover {
+  color: #c59a6b;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid #3a4a55;
+  font-size: 0.8rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .nav-links {
+    position: fixed;
+    top: 70px;
+    left: -100%;
+    flex-direction: column;
+    background: white;
+    width: 100%;
+    text-align: center;
+    padding: 2rem;
+    gap: 1.5rem;
+    box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+    transition: 0.3s;
+  }
+  
+  .nav-links.active {
+    left: 0;
+  }
+  
+  .burger {
+    display: block;
+  }
+  
+  .welcome-section {
+    grid-template-columns: 1fr;
+  }
+  
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+  
+  .hero-content h2 {
+    font-size: 1.5rem;
+  }
+  
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .leadership-card {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .theme-verse {
+    grid-template-columns: 1fr;
+  }
+  
+  .newsletter-signup form {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .newsletter-signup input {
+    width: 100%;
+    max-width: 300px;
+  }
+  
+  .structure-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .bishop-card {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .admin-actions {
+    justify-content: center;
+  }
+}
+
+/* Additional Styles */
+.link {
+  color: #c59a6b;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.card, .news-card, .highlight-card {
+  animation: fadeIn 0.5s ease-out;
+}
+
+/* Breadcrumb */
+.breadcrumb {
+  margin-bottom: 2rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #eee;
+}
+
+.breadcrumb a {
+  color: #c59a6b;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.breadcrumb a:hover {
+  text-decoration: underline;
+}
+
+/* Parish Info */
+.parish-info {
+  background: #f8f9fa;
+  padding: 2rem;
+  border-radius: 20px;
+  margin-top: 2rem;
+}
+
+.parish-info h3 {
+  color: #2c6e4f;
+  margin: 1rem 0 0.5rem;
+}
+
+.parish-info h3:first-child {
+  margin-top: 0;
+}
+
+.parish-info ul {
+  margin-left: 1.5rem;
+  margin-top: 0.5rem;
+}
+
+.parish-info li {
+  margin-bottom: 0.5rem;
+}
+
+/* Scroll to Top Button */
+.scroll-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: #c59a6b;
+  color: white;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+  z-index: 999;
+}
+
+.scroll-top.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.scroll-top:hover {
+  background: #2c6e4f;
+  transform: translateY(-3px);
+}
+
+/* Loading State */
+.loading {
+  text-align: center;
+  padding: 2rem;
+  color: #c59a6b;
+}
+
+/* Success Messages */
+.success-message {
+  background: #d4edda;
+  color: #155724;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  display: none;
+}
+
+.success-message.show {
+  display: block;
+  animation: fadeIn 0.3s ease-out;
+}
+
+.error-message {
+  background: #f8d7da;
+  color: #721c24;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  display: none;
+}
+
+.error-message.show {
+  display: block;
+  animation: fadeIn 0.3s ease-out;
+}

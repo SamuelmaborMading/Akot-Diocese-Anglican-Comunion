@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact & Donate - Akot Diocese</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <img class="img-logo" src="images/Akot Diocese logo design.png" alt=""> ECSS Akot Diocese
+      </div>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="structure.html">Diocese Structure</a></li>
+        <li><a href="news.html">News</a></li>
+        <li><a href="contact.html" class="active">Contact & Donate</a></li>
+        <li><a href="admin.html">Admin Panel</a></li>
+      </ul>
+      <div class="burger" id="burger"><i class="fas fa-bars"></i></div>
+    </nav>
+  </header>
+  <div class="background-image"><img src="images/profile.jpg" alt=""></div>
+  <main class="container">
+    <h1>Get in Touch & Support Our Mission</h1>
+    
+    <div class="contact-grid">
+      <div class="contact-info">
+        <h3><i class="fas fa-map-marker-alt"></i> Our Location</h3>
+        <p>Akot Diocese Headquarters<br>P.O. Box 10, Akot, Lakes State<br>South Sudan</p>
+        
+        <h3><i class="fas fa-phone-alt"></i> Contact Numbers</h3>
+        <p>Main Office: +211 912 345 678<br>Bishop's Office: +211 911 234 567<br>Administration: +211 922 345 678</p>
+        
+        <h3><i class="fas fa-envelope"></i> Email Addresses</h3>
+        <p>General Inquiries: info@akotdiocese.org<br>Bishop's Office: bishop@akotdiocese.org<br>Finance: finance@akotdiocese.org</p>
+        
+        <h3><i class="fas fa-clock"></i> Office Hours</h3>
+        <p>Monday - Friday: 8:00 AM - 5:00 PM<br>Saturday: 9:00 AM - 1:00 PM<br>Sunday: Closed (Worship Services)</p>
+      </div>
+      
+      <div class="forms-container">
+        <div class="form-card">
+          <h3><i class="fas fa-envelope"></i> Contact Form</h3>
+          <form id="contactForm">
+            <div class="form-group">
+              <label>Full Name *</label>
+              <input type="text" id="contactName" required>
+            </div>
+            <div class="form-group">
+              <label>Email *</label>
+              <input type="email" id="contactEmail" required>
+            </div>
+            <div class="form-group">
+              <label>Phone</label>
+              <input type="tel" id="contactPhone">
+            </div>
+            <div class="form-group">
+              <label>Message / Inquiry *</label>
+              <textarea rows="4" id="contactMsg" required></textarea>
+            </div>
+            <button type="submit">Send Message</button>
+          </form>
+        </div>
+        
+        <div class="form-card">
+          <h3><i class="fas fa-hand-holding-usd"></i> Donation Form</h3>
+          <form id="donationForm">
+            <div class="form-group">
+              <label>Full Name *</label>
+              <input type="text" id="donName" required>
+            </div>
+            <div class="form-group">
+              <label>Email *</label>
+              <input type="email" id="donEmail" required>
+            </div>
+            <div class="form-group">
+              <label>Phone</label>
+              <input type="tel" id="donPhone">
+            </div>
+            <div class="form-group">
+              <label>Address</label>
+              <input type="text" id="donAddress">
+            </div>
+            <div class="form-group">
+              <label>Donation Amount (USD/SDG) *</label>
+              <input type="number" id="donAmount" required step="0.01">
+            </div>
+            <div class="form-group">
+              <label>Message (Optional)</label>
+              <textarea rows="3" id="donMsg"></textarea>
+            </div>
+            <button type="submit">Donate Now</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </main>
+  
+  <footer>
+    <div class="footer-content">
+      <div class="footer-col">
+        <h4>ECSS Akot Diocese</h4>
+        <p>P.O. Box 10, Akot, South Sudan<br>Email: info@akotdiocese.org<br>Phone: +211 912 345 678</p>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="structure.html">Diocese Structure</a></li>
+          <li><a href="news.html">News</a></li>
+          <li><a href="contact.html">Donate</a></li>
+          <li><a href="admin.html">Admin</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Follow Us</h4>
+        <div class="social-icons">
+          <i class="fab fa-facebook-f"></i>
+          <i class="fab fa-twitter"></i>
+          <i class="fab fa-youtube"></i>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 Episcopal Church of South Sudan - Akot Diocese. All rights reserved.</p>
+    </div>
+  </footer>
+  
+  <script src="script.js"></script>
+</body>
+</html>

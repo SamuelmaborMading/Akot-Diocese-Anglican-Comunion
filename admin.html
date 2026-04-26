@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard - ECSS Akot Diocese</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <img class="img-logo" src="images/Akot Diocese logo design.png" alt=""> ECSS Akot Diocese
+      </div>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="structure.html">Diocese Structure</a></li>
+        <li><a href="news.html">News</a></li>
+        <li><a href="contact.html">Contact & Donate</a></li>
+        <li><a href="admin.html" class="active">Admin Panel</a></li>
+      </ul>
+      <div class="burger" id="burger"><i class="fas fa-bars"></i></div>
+    </nav>
+  </header>
+  <div class="background-image"><img src="images/background-image.jpg" alt=""></div>
+  <main class="container">
+    <h1>Admin Dashboard</h1>
+    <p class="subtitle">Manage contact messages, donation records, and inquiries</p>
+    
+    <div class="admin-actions">
+      <button id="clearDataBtn" class="btn-outline"><i class="fas fa-trash-alt"></i> Clear All Data</button>
+      <button id="exportDataBtn" class="btn-outline"><i class="fas fa-download"></i> Export Data</button>
+    </div>
+    
+    <div class="admin-section">
+      <h2><i class="fas fa-comments"></i> Contact Messages</h2>
+      <div class="table-container">
+        <table class="admin-table" id="contactsTable">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Email</th>
+              <th>Phone</th>
+              <th>Message</th>
+              <th>Date</th>
+            </tr>
+          </thead>
+          <tbody id="contactsBody">
+            <tr><td colspan="5" class="no-data">No messages yet</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    
+    <div class="admin-section">
+      <h2><i class="fas fa-donate"></i> Donation Records</h2>
+      <div class="table-container">
+        <table class="admin-table" id="donationsTable">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Email</th>
+              <th>Phone</th>
+              <th>Address</th>
+              <th>Amount</th>
+              <th>Message</th>
+              <th>Date</th>
+            </tr>
+          </thead>
+          <tbody id="donationsBody">
+            <tr><td colspan="7" class="no-data">No donations yet</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    
+    <div class="admin-section">
+      <h2><i class="fas fa-chart-line"></i> Statistics</h2>
+      <div class="stats-grid" id="statsGrid">
+        <div class="stat-card">
+          <i class="fas fa-envelope"></i>
+          <h3 id="totalContacts">0</h3>
+          <p>Total Messages</p>
+        </div>
+        <div class="stat-card">
+          <i class="fas fa-hand-holding-usd"></i>
+          <h3 id="totalDonations">0</h3>
+          <p>Total Donations</p>
+        </div>
+        <div class="stat-card">
+          <i class="fas fa-dollar-sign"></i>
+          <h3 id="totalAmount">$0</h3>
+          <p>Total Amount Received</p>
+        </div>
+      </div>
+    </div>
+  </main>
+  
+  <footer>
+    <div class="footer-content">
+      <div class="footer-col">
+        <h4>ECSS Akot Diocese</h4>
+        <p>P.O. Box 10, Akot, South Sudan<br>Email: info@akotdiocese.org<br>Phone: +211 912 345 678</p>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="structure.html">Diocese Structure</a></li>
+          <li><a href="news.html">News</a></li>
+          <li><a href="contact.html">Donate</a></li>
+          <li><a href="admin.html">Admin</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Follow Us</h4>
+        <div class="social-icons">
+          <i class="fab fa-facebook-f"></i>
+          <i class="fab fa-twitter"></i>
+          <i class="fab fa-youtube"></i>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 Episcopal Church of South Sudan - Akot Diocese. All rights reserved.</p>
+    </div>
+  </footer>
+  
+  <script src="script.js"></script>
+</body>
+</html>
