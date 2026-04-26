@@ -10,23 +10,40 @@ body {
   color: #2c3e4f;
   line-height: 1.6;
 }
+
+/* NEW: Ensure all images are fully responsive by default */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block; /* Removes extra space below images */
+}
+
+/* Background image fix - NEW */
 .background-image {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  min-height: 65vh;
+  min-height: 40vh; /* Reduced for better mobile appearance */
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 40px;
+  margin-top: 70px; /* Account for fixed navbar */
 }
+
+.background-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures image covers area without distortion */
+  display: none; /* Hide the actual img tag, use background-image in inline style if needed */
+}
+
 /* Navbar */
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
   background: #ffffff;
-  padding: 1rem 2rem;
+  padding: 0.8rem 1.5rem; /* Slightly reduced padding for mobile */
   box-shadow: 0 4px 12px rgba(0,0,0,0.05);
   position: fixed;
   top: 0;
@@ -36,28 +53,24 @@ body {
 }
 
 .logo {
-  font-size: 1.5rem;
+  font-size: 1.2rem; /* Slightly smaller on mobile base */
   font-weight: 700;
   color: #2c6e4f;
-}
-.img-logo{
-  width: 50px;
-  margin-bottom: 0;
-
-}
-
-.logo {
   display: flex;
-  justify-content: center;
   align-items: center;
-  margin-right: 8px;
+  gap: 8px;
+}
+
+.img-logo {
+  width: 40px; /* Slightly smaller for better fit */
+  height: auto;
   margin-bottom: 0;
 }
 
 .nav-links {
   display: flex;
   list-style: none;
-  gap: 2rem;
+  gap: 1.5rem;
 }
 
 .nav-links a {
@@ -67,49 +80,53 @@ body {
   transition: 0.3s;
 }
 
-.nav-links a:hover, .nav-links a.active {
+.nav-links a:hover,
+.nav-links a.active {
   color: #2c6e4f;
   border-bottom: 2px solid #c59a6b;
 }
 
 .burger {
   display: none;
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   cursor: pointer;
+  color: #2c6e4f;
 }
 
-/* Hero */
+/* Hero Section - NEW improvements */
 .hero {
-  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.5)), url('images/Prayer.jpg') center/cover no-repeat;
-  min-height: 65vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5)),
+    url('images/Prayer.jpg') center/cover no-repeat;
+  min-height: 60vh;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
   color: white;
-  position: relative;
+  margin-top: 70px; /* Push below fixed navbar */
+  padding: 2rem;
 }
 
 .hero-content h1 {
-  font-size: 2.8rem;
+  font-size: 2.5rem;
   margin-bottom: 0.5rem;
 }
 
 .hero-content h2 {
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-weight: 400;
   margin-bottom: 1rem;
 }
 
 .hero-content p {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   margin-bottom: 2rem;
 }
 
 .btn-primary {
   background: #c59a6b;
   color: white;
-  padding: 0.8rem 2rem;
+  padding: 0.8rem 1.8rem;
   border-radius: 40px;
   text-decoration: none;
   font-weight: 600;
@@ -144,7 +161,7 @@ body {
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 3rem 2rem;
+  padding: 2rem 1.5rem; /* Reduced padding for mobile */
 }
 
 .subtitle {
@@ -153,7 +170,7 @@ body {
   text-align: center;
 }
 
-/* Welcome Section */
+/* Welcome Section - NEW fully responsive */
 .welcome-section {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -162,14 +179,14 @@ body {
 }
 
 .welcome-text h3 {
-  font-size: 2rem;
+  font-size: 1.8rem;
   margin-bottom: 1rem;
   color: #2c6e4f;
 }
 
 .highlights-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 1.5rem;
 }
 
@@ -179,7 +196,7 @@ body {
   border-radius: 20px;
   text-align: center;
   transition: 0.2s;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
 }
 
 .highlight-card i {
@@ -203,12 +220,13 @@ body {
 
 .arch-link {
   background: #eef2f3;
-  padding: 0.6rem 1.3rem;
+  padding: 0.6rem 1.2rem;
   border-radius: 50px;
   text-decoration: none;
   color: #2c6e4f;
   font-weight: 500;
   transition: 0.2s;
+  font-size: 0.9rem;
 }
 
 .arch-link:hover {
@@ -221,11 +239,11 @@ body {
   margin-top: 2rem;
 }
 
-/* Structure Grid */
+/* Structure Grid - NEW fully responsive */
 .structure-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px,1fr));
-  gap: 2rem;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
   margin-top: 2rem;
 }
 
@@ -233,7 +251,7 @@ body {
   background: white;
   border-radius: 20px;
   padding: 1.5rem;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
   transition: transform 0.2s, box-shadow 0.2s;
   text-decoration: none;
   color: inherit;
@@ -242,11 +260,11 @@ body {
 
 .card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
 }
 
 .card h4 {
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   margin-bottom: 0.5rem;
   color: #2c6e4f;
 }
@@ -256,7 +274,7 @@ body {
   color: #c59a6b;
 }
 
-/* About Page */
+/* About Page - NEW responsive images */
 .about-section {
   margin-bottom: 3rem;
 }
@@ -267,6 +285,7 @@ body {
   border-bottom: 2px solid #c59a6b;
   display: inline-block;
   padding-bottom: 0.5rem;
+  font-size: 1.5rem;
 }
 
 .bishop-card {
@@ -277,6 +296,7 @@ body {
   border-radius: 20px;
   margin-bottom: 1rem;
   align-items: center;
+  flex-wrap: wrap; /* Allow wrapping on small screens */
 }
 
 .bishop-card.current {
@@ -289,11 +309,12 @@ body {
   height: 100px;
   border-radius: 50%;
   object-fit: cover;
+  flex-shrink: 0; /* Prevent image from shrinking */
 }
 
 .leadership-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   gap: 1.5rem;
   margin-top: 1rem;
 }
@@ -311,8 +332,9 @@ body {
   margin-bottom: 0.5rem;
 }
 
-/* Archdeaconry Detail */
-.archdeaconry-detail, .parish-info {
+/* Archdeaconry Detail - NEW fully responsive */
+.archdeaconry-detail,
+.parish-info {
   margin-top: 2rem;
 }
 
@@ -320,27 +342,30 @@ body {
   display: flex;
   gap: 2rem;
   background: #f8f9fa;
-  padding: 2rem;
+  padding: 1.5rem;
   border-radius: 20px;
   margin-bottom: 2rem;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .leader-img-large {
-  width: 150px;
-  height: 150px;
+  width: 120px;
+  height: 120px;
   border-radius: 50%;
   object-fit: cover;
+  flex-shrink: 0;
 }
 
 .leadership-info h2 {
   margin-bottom: 1rem;
+  font-size: 1.4rem;
 }
 
 .leadership-row {
   display: flex;
   flex-wrap: wrap;
-  gap: 1.5rem;
+  gap: 1rem;
   margin-top: 1rem;
 }
 
@@ -348,16 +373,18 @@ body {
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  font-size: 0.9rem;
 }
 
 .theme-verse {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 2rem;
+  gap: 1.5rem;
   margin: 2rem 0;
 }
 
-.theme-box, .verse-box {
+.theme-box,
+.verse-box {
   padding: 1.5rem;
   border-radius: 20px;
   text-align: center;
@@ -372,7 +399,8 @@ body {
   border-left: 4px solid #c59a6b;
 }
 
-.theme-box i, .verse-box i {
+.theme-box i,
+.verse-box i {
   font-size: 2rem;
   color: #c59a6b;
   margin-bottom: 1rem;
@@ -380,6 +408,7 @@ body {
 
 .breadcrumb {
   margin-bottom: 2rem;
+  font-size: 0.9rem;
 }
 
 .breadcrumb a {
@@ -387,11 +416,11 @@ body {
   text-decoration: none;
 }
 
-/* News Section */
+/* News Section - NEW responsive images */
 .news-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-  gap: 2rem;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
   margin: 2rem 0;
 }
 
@@ -399,9 +428,8 @@ body {
   background: white;
   border-radius: 16px;
   overflow: hidden;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
   transition: all 0.3s ease;
-  position: relative;
 }
 
 .news-card img {
@@ -411,19 +439,19 @@ body {
 }
 
 .news-content {
-  padding: 1.5rem;
-  position: relative;
+  padding: 1.2rem;
 }
 
 .news-date {
   color: #c59a6b;
-  font-size: 0.85rem;
+  font-size: 0.8rem;
   font-weight: 500;
 }
 
 .news-content h3 {
   margin: 0.5rem 0;
   color: #2c6e4f;
+  font-size: 1.2rem;
 }
 
 .news-hover-preview {
@@ -435,12 +463,12 @@ body {
   margin: 0.5rem 0;
   border-radius: 8px;
   color: #555;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
 }
 
 .hover-news:hover {
   transform: translateY(-5px);
-  box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
 }
 
 .hover-news:hover .news-hover-preview {
@@ -450,10 +478,11 @@ body {
 
 .read-more {
   display: inline-block;
-  margin-top: 1rem;
+  margin-top: 0.8rem;
   color: #c59a6b;
   text-decoration: none;
   font-weight: 500;
+  font-size: 0.9rem;
 }
 
 .read-more:hover {
@@ -461,20 +490,22 @@ body {
 }
 
 .featured-news {
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
 }
 
+/* Newsletter - NEW fully responsive */
 .newsletter-signup {
   background: linear-gradient(135deg, #2c6e4f, #1e4a35);
   color: white;
-  padding: 3rem;
+  padding: 2rem 1.5rem;
   border-radius: 20px;
   text-align: center;
-  margin-top: 3rem;
+  margin-top: 2rem;
 }
 
 .newsletter-signup h3 {
   margin-bottom: 0.5rem;
+  font-size: 1.4rem;
 }
 
 .newsletter-signup form {
@@ -482,13 +513,15 @@ body {
   gap: 1rem;
   justify-content: center;
   margin-top: 1.5rem;
+  flex-wrap: wrap;
 }
 
 .newsletter-signup input {
-  padding: 0.8rem 1.5rem;
+  padding: 0.8rem 1.2rem;
   border: none;
   border-radius: 40px;
-  width: 300px;
+  width: 280px;
+  max-width: 100%;
   font-size: 1rem;
 }
 
@@ -496,13 +529,13 @@ body {
   background: #c59a6b;
   color: white;
   border: none;
-  padding: 0.8rem 2rem;
+  padding: 0.8rem 1.8rem;
   border-radius: 40px;
   cursor: pointer;
   font-weight: 600;
 }
 
-/* Contact Page */
+/* Contact Page - NEW fully responsive */
 .contact-grid {
   display: grid;
   grid-template-columns: 1fr 2fr;
@@ -512,13 +545,14 @@ body {
 
 .contact-info {
   background: #f8f9fa;
-  padding: 2rem;
+  padding: 1.5rem;
   border-radius: 20px;
 }
 
 .contact-info h3 {
   color: #2c6e4f;
   margin: 1rem 0 0.5rem;
+  font-size: 1.2rem;
 }
 
 .contact-info h3:first-child {
@@ -527,21 +561,21 @@ body {
 
 .forms-container {
   display: grid;
-  gap: 2rem;
-grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  grid-template-columns: 1fr 1fr;
 }
 
 .form-card {
-  
   background: white;
-  padding: 2rem;
+  padding: 1.5rem;
   border-radius: 20px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
 .form-card h3 {
   color: #2c6e4f;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.2rem;
+  font-size: 1.2rem;
 }
 
 .form-group {
@@ -552,18 +586,22 @@ grid-template-columns: 1fr 1fr;
   display: block;
   margin-bottom: 0.4rem;
   font-weight: 500;
+  font-size: 0.9rem;
 }
 
-.form-group input, .form-group textarea, .form-group select {
+.form-group input,
+.form-group textarea,
+.form-group select {
   width: 100%;
-  padding: 0.8rem;
+  padding: 0.7rem;
   border: 1px solid #ddd;
   border-radius: 12px;
   font-family: inherit;
-  font-size: 1rem;
+  font-size: 0.95rem;
 }
 
-.form-group input:focus, .form-group textarea:focus {
+.form-group input:focus,
+.form-group textarea:focus {
   outline: none;
   border-color: #c59a6b;
 }
@@ -572,36 +610,40 @@ button {
   background: #2c6e4f;
   color: white;
   border: none;
-  padding: 0.8rem 2rem;
+  padding: 0.7rem 1.5rem;
   border-radius: 40px;
   font-weight: 600;
   cursor: pointer;
   transition: 0.2s;
+  font-size: 0.95rem;
 }
 
 button:hover {
   background: #1f4f38;
 }
 
-/* Admin Page */
+/* Admin Page - NEW responsive tables */
 .admin-actions {
   display: flex;
   gap: 1rem;
   justify-content: flex-end;
   margin-bottom: 2rem;
+  flex-wrap: wrap;
 }
 
 .admin-section {
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
 }
 
 .admin-section h2 {
   margin-bottom: 1rem;
   color: #2c6e4f;
+  font-size: 1.4rem;
 }
 
 .table-container {
-  overflow-x: auto;
+  overflow-x: auto; /* Enables horizontal scroll on small screens */
+  -webkit-overflow-scrolling: touch;
 }
 
 .admin-table {
@@ -610,17 +652,20 @@ button:hover {
   background: white;
   border-radius: 16px;
   overflow: hidden;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  min-width: 600px; /* Ensures table doesn't break on small screens */
 }
 
-.admin-table th, .admin-table td {
-  padding: 1rem;
+.admin-table th,
+.admin-table td {
+  padding: 0.8rem;
   text-align: left;
   border-bottom: 1px solid #eee;
+  font-size: 0.85rem;
 }
 
 .admin-table th {
-   background: #f8f9fa;
+  background: #f8f9fa;
   font-weight: 600;
   color: #2c6e4f;
 }
@@ -637,7 +682,7 @@ button:hover {
 
 .stats-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   gap: 1.5rem;
   margin-top: 1rem;
 }
@@ -645,26 +690,26 @@ button:hover {
 .stat-card {
   background: linear-gradient(135deg, #2c6e4f, #1e4a35);
   color: white;
-  padding: 1.5rem;
+  padding: 1.2rem;
   border-radius: 20px;
   text-align: center;
 }
 
 .stat-card i {
-  font-size: 2rem;
+  font-size: 1.8rem;
   margin-bottom: 0.5rem;
 }
 
 .stat-card h3 {
-  font-size: 2rem;
+  font-size: 1.8rem;
   margin: 0.5rem 0;
 }
 
-/* Footer */
+/* Footer - NEW responsive */
 footer {
   background: #1e2a32;
   color: #ddd;
-  padding: 2rem 2rem 1rem;
+  padding: 2rem 1.5rem 1rem;
   margin-top: 3rem;
 }
 
@@ -674,12 +719,18 @@ footer {
   justify-content: space-between;
   max-width: 1200px;
   margin: 0 auto;
-  gap: 2rem;
+  gap: 1.5rem;
+}
+
+.footer-col {
+  flex: 1;
+  min-width: 180px;
 }
 
 .footer-col h4 {
   color: white;
   margin-bottom: 1rem;
+  font-size: 1.1rem;
 }
 
 .footer-col ul {
@@ -689,7 +740,8 @@ footer {
 .footer-col a {
   color: #ccc;
   text-decoration: none;
-  line-height: 2;
+  line-height: 1.8;
+  font-size: 0.85rem;
 }
 
 .footer-col a:hover {
@@ -697,7 +749,7 @@ footer {
 }
 
 .social-icons i {
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   margin-right: 1rem;
   cursor: pointer;
   transition: 0.2s;
@@ -712,11 +764,66 @@ footer {
   margin-top: 2rem;
   padding-top: 1rem;
   border-top: 1px solid #3a4a55;
-  font-size: 0.8rem;
+  font-size: 0.75rem;
 }
 
-/* Responsive */
+/* Scroll to Top Button */
+.scroll-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #c59a6b;
+  color: white;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  z-index: 999;
+}
+
+.scroll-top.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.scroll-top:hover {
+  background: #2c6e4f;
+  transform: translateY(-3px);
+}
+
+/* ============================================ */
+/* RESPONSIVE MEDIA QUERIES - ENHANCED          */
+/* ============================================ */
+
+/* Tablet and smaller */
+@media (max-width: 992px) {
+  .container {
+    padding: 2rem 1.2rem;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .forms-container {
+    grid-template-columns: 1fr;
+  }
+
+  .theme-verse {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Mobile Landscape and Portrait */
 @media (max-width: 768px) {
+  /* Navbar */
   .nav-links {
     position: fixed;
     top: 70px;
@@ -725,82 +832,179 @@ footer {
     background: white;
     width: 100%;
     text-align: center;
-    padding: 2rem;
-    gap: 1.5rem;
-    box-shadow: 0 10px 15px rgba(0,0,0,0.1);
-    transition: 0.3s;
+    padding: 1.5rem;
+    gap: 1rem;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+    transition: left 0.3s ease;
+    z-index: 99;
   }
-  
+
   .nav-links.active {
     left: 0;
   }
-  
+
   .burger {
     display: block;
   }
-  
+
+  /* Hero */
+  .hero {
+    min-height: 50vh;
+    margin-top: 65px;
+  }
+
+  .hero-content h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero-content h2 {
+    font-size: 1.3rem;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+  }
+
+  /* Welcome Section */
   .welcome-section {
     grid-template-columns: 1fr;
+    gap: 1.5rem;
   }
-  
-  .hero-content h1 {
-    font-size: 2rem;
-  }
-  
-  .hero-content h2 {
+
+  .welcome-text h3 {
     font-size: 1.5rem;
   }
-  
-  .contact-grid {
-    grid-template-columns: 1fr;
-  }
-  
-  .leadership-card {
-    flex-direction: column;
-    text-align: center;
-  }
-  
-  .theme-verse {
-    grid-template-columns: 1fr;
-  }
-  
-  .newsletter-signup form {
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .newsletter-signup input {
-    width: 100%;
-    max-width: 300px;
-  }
-  
+
+  /* Structure Grid */
   .structure-grid {
     grid-template-columns: 1fr;
   }
-  
+
+  /* Bishop Card */
   .bishop-card {
     flex-direction: column;
     text-align: center;
   }
-  
+
+  .bishop-img {
+    width: 120px;
+    height: 120px;
+  }
+
+  /* Leadership Card */
+  .leadership-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .leader-img-large {
+    width: 130px;
+    height: 130px;
+  }
+
+  .leadership-row {
+    justify-content: center;
+  }
+
+  /* Newsletter */
+  .newsletter-signup form {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .newsletter-signup input {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  /* Admin Stats */
   .stats-grid {
     grid-template-columns: 1fr;
   }
-  
+
   .admin-actions {
     justify-content: center;
   }
+
+  /* Footer */
+  .footer-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 1.5rem;
+  }
+
+  .social-icons {
+    margin-top: 0.5rem;
+  }
 }
 
-/* Additional Styles */
-.link {
-  color: #c59a6b;
-  text-decoration: none;
-  font-weight: 500;
+/* Small Mobile (below 480px) */
+@media (max-width: 480px) {
+  .container {
+    padding: 1.5rem 1rem;
+  }
+
+  .hero-content h1 {
+    font-size: 1.5rem;
+  }
+
+  .hero-content h2 {
+    font-size: 1.1rem;
+  }
+
+  .btn-primary,
+  .btn-outline {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.85rem;
+  }
+
+  .about-section h2 {
+    font-size: 1.3rem;
+  }
+
+  .card h4 {
+    font-size: 1.2rem;
+  }
+
+  .news-card img {
+    height: 180px;
+  }
+
+  .news-content h3 {
+    font-size: 1.1rem;
+  }
+
+  .stat-card h3 {
+    font-size: 1.5rem;
+  }
+
+  .admin-table th,
+  .admin-table td {
+    padding: 0.6rem;
+    font-size: 0.75rem;
+  }
+
+  .scroll-top {
+    width: 40px;
+    height: 40px;
+    bottom: 15px;
+    right: 15px;
+  }
 }
 
-.link:hover {
-  text-decoration: underline;
+/* Extra Small Devices */
+@media (max-width: 360px) {
+  .logo {
+    font-size: 1rem;
+  }
+
+  .img-logo {
+    width: 35px;
+  }
+
+  .hero-content h1 {
+    font-size: 1.3rem;
+  }
 }
 
 /* Animations */
@@ -815,31 +1019,27 @@ footer {
   }
 }
 
-.card, .news-card, .highlight-card {
+.card,
+.news-card,
+.highlight-card {
   animation: fadeIn 0.5s ease-out;
 }
 
-/* Breadcrumb */
-.breadcrumb {
-  margin-bottom: 2rem;
-  padding-bottom: 0.5rem;
-  border-bottom: 1px solid #eee;
-}
-
-.breadcrumb a {
+/* Link styles */
+.link {
   color: #c59a6b;
   text-decoration: none;
   font-weight: 500;
 }
 
-.breadcrumb a:hover {
+.link:hover {
   text-decoration: underline;
 }
 
 /* Parish Info */
 .parish-info {
   background: #f8f9fa;
-  padding: 2rem;
+  padding: 1.5rem;
   border-radius: 20px;
   margin-top: 2rem;
 }
@@ -847,6 +1047,7 @@ footer {
 .parish-info h3 {
   color: #2c6e4f;
   margin: 1rem 0 0.5rem;
+  font-size: 1.2rem;
 }
 
 .parish-info h3:first-child {
@@ -854,43 +1055,20 @@ footer {
 }
 
 .parish-info ul {
-  margin-left: 1.5rem;
+  margin-left: 1.2rem;
   margin-top: 0.5rem;
 }
 
 .parish-info li {
   margin-bottom: 0.5rem;
+  font-size: 0.95rem;
 }
 
-/* Scroll to Top Button */
-.scroll-top {
-  position: fixed;
-  bottom: 30px;
-  right: 30px;
-  background: #c59a6b;
-  color: white;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  opacity: 0;
-  visibility: hidden;
-  transition: all 0.3s;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
-  z-index: 999;
-}
-
-.scroll-top.show {
-  opacity: 1;
-  visibility: visible;
-}
-
-.scroll-top:hover {
-  background: #2c6e4f;
-  transform: translateY(-3px);
+/* Breadcrumb */
+.breadcrumb {
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #eee;
 }
 
 /* Loading State */
@@ -900,7 +1078,7 @@ footer {
   color: #c59a6b;
 }
 
-/* Success Messages */
+/* Success/Error Messages */
 .success-message {
   background: #d4edda;
   color: #155724;
