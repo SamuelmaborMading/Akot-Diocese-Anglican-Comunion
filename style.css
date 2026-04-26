@@ -94,7 +94,7 @@ img {
 
 /* Hero Section */
 .hero {
-  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5));
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5)),url('Prayer.jpg') center/cover no-repeat;
   background-size: cover;
   background-position: center;
   min-height: 60vh;
