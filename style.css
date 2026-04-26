@@ -80,7 +80,7 @@ body {
 
 /* Hero */
 .hero {
-  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.5)), url('images/Prayer.jpg') center/cover no-repeat;
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.5)), url('Prayer.jpg') center/cover no-repeat;
   min-height: 65vh;
   display: flex;
   align-items: center;
